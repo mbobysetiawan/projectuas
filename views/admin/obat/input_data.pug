@@ -1,0 +1,57 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Obat
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input data obat
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputobat", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodeobat') Kode Obat
+                                        .col-sm-10
+                                            input#kodeobat.form-control(type='text' name="kodeobat" placeholder='Kode Obat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='namaobat') Nama Obat
+                                        .col-sm-10
+                                            input#namaobat.form-control(type='text' name="namaobat" placeholder='Nama Obat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='jenisobat') Jenis Obat
+                                        .col-sm-10
+                                            input#jenisobat.form-control(type='text' name="jenisobat" placeholder='Jenis Obat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='stockobat') Stock Obat
+                                        .col-sm-10
+                                            input#stockobat.form-control(type='text' name="stockobat" placeholder='Stock Obat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Harga
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' name="harga" placeholder='Harga')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
+

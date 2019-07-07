@@ -1,0 +1,68 @@
+.main
+    // Sign up form
+    section.signup
+        .container
+            .signup-content
+                .signup-form
+                    h2.form-title Sign up
+                    form#register-form.register-form(method='POST', action='/regis/', role='form')
+                        -if (messages.info)
+                            .alert
+                                span.closebtn(onclick="this.parentElement.style.display='none';") &times;
+                                |  #{messages.info}
+                        .form-group
+                            label(for='firstname')
+                                i.zmdi.zmdi-account.material-icons-name
+                            input#firstname(type='text' name='firstname' placeholder='First Name')
+                        .form-group
+                            label(for='lastname')
+                                i.zmdi.zmdi-account.material-icons-name
+                            input#lastname(type='text' name='lastname' placeholder='Last Name')
+                        .form-group
+                            label(for='username')
+                                i.zmdi.zmdi-account.material-icons-name
+                            input#username(type='text' name='username' placeholder='Username')
+                        .form-group
+                            label(for='email')
+                                i.zmdi.zmdi-email
+                            input#email(type='email' name='email' placeholder='Email')
+                        .form-group
+                            label(for='password')
+                                i.zmdi.zmdi-lock-outline
+                            input#password(type='password' name='password' placeholder='Password')
+                        .form-group.form-button
+                            input#signup.form-submit(type='submit' name='signup' value='Register')
+                .signup-image
+                    figure
+                        img(src='loginasset/images/signup-image.jpg' alt='sing up image')
+                    a.signup-image-link(href='#') I am already member
+    // Sing in  Form
+    section.sign-in
+        .container
+            .signin-content
+                .signin-image
+                    figure
+                        img(src='loginasset/images/signin-image.jpg' alt='sing up image')
+                    a.signup-image-link(href='#') Create an account
+                .signin-form
+                    h2.form-title Sign in
+                    form#login-form.register-form(method='POST', action='/login/', role='form')
+                        .form-group
+                            label(for='username')
+                                i.zmdi.zmdi-account.material-icons-name
+                            input#your_name(type='text' name='username' placeholder='Username')
+                        .form-group
+                            label(for='your_pass')
+                                i.zmdi.zmdi-lock
+                            input#your_pass(type='password' name='password' placeholder='Password')
+                        .form-group
+                            input#remember-me.agree-term(type='checkbox' name='remember-me')
+                            label.label-agree-term(for='remember-me')
+                                span
+                                    span
+                                | Remember me
+                        .form-group.form-button
+                            input#signin.form-submit(type='submit' name='signin' value='Log in')
+// JS
+script(src='loginasset/vendor/jquery/jquery.min.js')
+script(src='loginasset/js/main.js')
